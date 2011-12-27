@@ -17,7 +17,7 @@ https = require('https');
  * @param {Number} port Port
  * @param {String} path Path of request
  */
-SimpleJSONRPCClient = function (scheme, host, port, path) {
+JSONRPCClient = function (scheme, host, port, path) {
     this.scheme = scheme;
     this.host = host;
     this.port = port;
