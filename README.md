@@ -12,7 +12,7 @@ Simply use npm to install it
 
 or download the code from the repo and stick it in your project folder.
 
-Usage
+Simple usage :)
 ------------
 
     var JSONRPCClient = require('node-jsonrpc-client');

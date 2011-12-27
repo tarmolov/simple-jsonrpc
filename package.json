@@ -1,12 +1,12 @@
 {
-    "name" : "jsonrpc-client",
+    "name" : "simple-jsonrpc-client",
     "version" : "0.0.1",
     "description" : "A simple JSON-RPC client.",
     "author" : "Alexander Tarmolov <alexander@tarmolov.ru>",
     "main" : "./jsonrpc-client.js",
     "repository" : {
         "type" : "git",
-        "url" : "http://github.com/tarmolov/node-jsonrpc-client"
+        "url" : "http://github.com/tarmolov/node-simple-jsonrpc-client"
     },
     "licenses" : [
         {
