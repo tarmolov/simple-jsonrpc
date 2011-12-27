@@ -8,7 +8,7 @@ Installation
 
 Simply use npm to install it
 
-    npm install jsonrpc-ws
+    npm install simple-jsonrpc-client
 
 or download the code from the repo and stick it in your project folder.
 
