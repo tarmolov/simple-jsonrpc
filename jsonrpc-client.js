@@ -88,10 +88,10 @@ module.exports = {
      */
     create: function (url) {
         var urlParts = url.match(URL_REGEXP),
+            scheme = urlParts[1] || 'http',
             host = urlParts[2],
-            port = urlParts[4] || urlParts[1] === 'https' ? 443 : 8080,
-            path = urlParts[5],
-            scheme = urlParts[1] || 'http';
+            port = urlParts[4] || (scheme === 'https' ? 443 : 80),
+            path = urlParts[5];
 
         return new JSONRPCClient(scheme, host, port, path);
     }
