@@ -1,6 +1,6 @@
 {
     "name" : "simple-jsonrpc-client",
-    "version" : "0.0.3",
+    "version" : "0.0.4",
     "description" : "A simple JSON-RPC client.",
     "author" : "Alexander Tarmolov <alexander@tarmolov.ru>",
     "main" : "./jsonrpc-client.js",

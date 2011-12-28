@@ -45,7 +45,7 @@ JSONRPCClient = function (scheme, host, port, path) {
             path: this.path,
             method: 'POST',
             headers: {
-                'Content-Length': requestJSON.length
+                'Content-Length': Buffer.byteLength(requestJSON, encoding='utf8')
             }
         }
 
