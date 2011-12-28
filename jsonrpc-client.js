@@ -2,13 +2,10 @@
  * Simple JSON-RPC Client
  */
 
-var http, https, JSONRPCClient, URL_REGEXP;
+var JSONRPCClient, URL_REGEXP;
 
 // Take url in parts: scheme, host, root zone, port, and path of request
 URL_REGEXP = /(http|https):\/\/([\w\-_]+(?:\.([\w\-_]+))+)(?::([\d]+))*([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/;
-
-http = require('http');
-https = require('https');
 
 /**
  * JSON-RPC client
