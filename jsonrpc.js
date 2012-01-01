@@ -1,5 +1,5 @@
 /**
- * Simple JSON-RPC Client
+ * Simple JSON-RPC
  */
 
 var JSONRPCClient, URL_REGEXP;
@@ -83,7 +83,7 @@ module.exports = {
      * @param {String} url Server url
      * @return {JSONRPCClient} client
      */
-    create: function (url) {
+    client: function (url) {
         var urlParts = url.match(URL_REGEXP),
             scheme = urlParts[1] || 'http',
             host = urlParts[2],
