@@ -48,7 +48,7 @@ JSONRPCClient = function (scheme, host, port, path) {
 
         // Send request
         request = require(this.scheme).request(requestOptions, onComplete);
-		request.on('error', function (error) {
+	request.on('error', function (error) {
             onErrorCallback && onErrorCallback(error);
         });
         request.write(requestJSON);
