@@ -2,10 +2,9 @@
  * Simple JSON-RPC
  */
 
-var JSONRPCClient, URL_REGEXP;
+var url = require('url');
 
-// Take url in parts: scheme, host, root zone, port, and path of request
-URL_REGEXP = /(http|https):\/\/([\w\-_]+(?:\.([\w\-_]+))+)(?::([\d]+))*([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/;
+var JSONRPCClient;
 
 /**
  * JSON-RPC client
@@ -86,14 +85,11 @@ module.exports = {
      * @param {String} url Server url
      * @return {JSONRPCClient} client
      */
-    client: function (url) {
-        var urlParts = url.match(URL_REGEXP),
-            scheme = urlParts[1] || 'http',
-            host = urlParts[2],
-            port = urlParts[4] || (scheme === 'https' ? 443 : 80),
-            path = urlParts[5];
+    client: function (urlstr) {
 
-        return new JSONRPCClient(scheme, host, port, path);
+		var urlobj = url.parse(urlstr);
+
+        return new JSONRPCClient(urlobj.protocol.replace(":", "") || 'http', urlobj.hostname, urlobj.port || (urlobj.protocol === 'https' ? 443 : 80), urlobj.path);
     }
 
 };
